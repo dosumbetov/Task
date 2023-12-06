@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} menu item page {% endblock title %}
+
+{% block content %}
+    <div class="hero" style="background-image: url('{% static 'images/hero_1.jpg' %}');height: 200px;"></div>
+
+    <div class="container">
+        <div class="card mt-3">
+            <div class="card-header">
+              Menu Title Details
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{menu_item.menu_title}}</h5>
+              <p class="card-text">{{menu_item.text|safe}}</p>
+            </div>
+          </div>
+    </div>
+{% endblock content %}
+
+
